@@ -14,8 +14,6 @@
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/hexo-blog/atom.xml" title="2fish 的部落格" type="application/atom+xml">
-  
   
     <link rel="shortcut icon" href="/hexo-blog/favicon.png">
   
@@ -58,8 +56,10 @@
       </nav>
       <nav id="sub-nav">
         
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://github.com/your_github_account"><span class="fa fa-github"></span></a>
+          
         
-          <a class="nav-icon" href="/hexo-blog/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
         
         <a class="nav-icon nav-search-btn" title="搜尋"><span class="fa fa-search"></span></a>
       </nav>
@@ -221,6 +221,39 @@
 
 
   
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('#search-form').on('submit', function(e){
+      e.preventDefault();
+      var query = $('#search-input').val();
+      $.ajax({
+        url: '/search.xml',
+        dataType: 'xml',
+        success: function(data){
+          var posts = $(data).find('entry');
+          var results = [];
+          posts.each(function(){
+            var title = $(this).find('title').text();
+            if(title.toLowerCase().includes(query.toLowerCase())){
+              results.push(title);
+            }
+          });
+          $('#search-results').empty();
+          results.forEach(function(result){
+            $('#search-results').append('<li>' + result + '</li>');
+          });
+        }
+      });
+    });
+  });
+  </script>
+  <form id="search-form">
+    <input id="search-input" type="text" placeholder="Search">
+    <button type="submit">Search</button>
+  </form>
+  <ul id="search-results"></ul>
 </aside>
         
       </div>
