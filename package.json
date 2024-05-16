@@ -6,7 +6,7 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "push": "git add . && git commit -m 'Update' && git push origin dev",
+    "push": "git add . && git commit -m 'Update' && git push origin master:dev",
     "server": "hexo server"
   },
   "hexo": {
