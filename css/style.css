@@ -243,7 +243,7 @@ body {
 }
 .article-entry hr,
 .widget hr {
-  border: 1px dashed #ddd;
+  border: 1px solid #7691e13b;
 }
 .article-entry strong,
 .widget strong {
@@ -570,7 +570,7 @@ a.article-title:hover {
 .article-entry p,
 .article-entry table {
   line-height: 1.6em;
-  margin: 1.6em 0;
+  margin: 8px 0;
 }
 .article-entry h1,
 .article-entry h2,
@@ -1088,10 +1088,12 @@ a.article-title:hover {
   line-height: 1.6em;
   font-size: 0.85em;
 }
+
+/* 程式碼區塊 */
 .article-entry pre,
 .article-entry .highlight {
   background: #2d2d2d;
-  margin: 0 -20px;
+  margin: 0 0;
   padding: 15px 20px;
   border-style: solid;
   border-color: #ddd;
@@ -1099,19 +1101,22 @@ a.article-title:hover {
   overflow: auto;
   color: #ccc;
   line-height: 22.400000000000002px;
+  border-radius: 6px;
 }
 .article-entry .highlight .gutter pre,
 .article-entry .gist .gist-file .gist-data .line-numbers {
   color: #666;
   font-size: 0.85em;
 }
+
+/* code 文字樣式 */
 .article-entry pre,
 .article-entry code {
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
 }
 .article-entry code {
-  background: #eee;
-  text-shadow: 0 1px #fff;
+  background: #f4c8b4a6;
+  text-shadow: 0 0.5px #fff;
   padding: 0 0.3em;
 }
 .article-entry pre code {
