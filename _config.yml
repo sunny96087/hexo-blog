@@ -2,14 +2,28 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
-# Site
+# Site 網站設定
+# 網站名稱
 title: 2fish 的部落格
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
+
+# 網站副標題
+subtitle: 歡迎來到我的部落格！這裡是我記錄開發點滴的地方，希望你會喜歡😌
+
+# 網站描述
+description: '這是一個由 2fish 記錄開發旅程的部落格'
+
+# 關鍵字（用於 SEO）
+keywords: [部落格, 開發, 技術, 前端, 後端, blog, development, technology, frontend, backend]
+
+# 作者名稱
+author: 余誼姍 (2fish)
+
+# 站點語言
 language: zh-TW
-timezone: ''
+
+# 時區
+timezone: 'Asia/Taipei'
+
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -60,7 +74,7 @@ prismjs:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: '/blog'
+  path: '/'
   per_page: 10
   order_by: -date
 
